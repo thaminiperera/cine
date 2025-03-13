@@ -9,6 +9,6 @@ interface VideoPlayerProps {
 }
 
 export const VideoPlayer = ({playbackId, thumbnailUrl, autoPlay, onPlay}: VideoPlayerProps) => {
- if(!playbackId) return null
- return <MuxPlayer playbackId={playbackId} poster={thumbnailUrl || "/placeholder.svg"} playerInitTime={0} autoPlay={autoPlay} thumbnailTime={0} className="w-full h-full object-contain" accentColor="#FF0000" onPlay={onPlay}/>
+//  if(!playbackId) return null
+ return <MuxPlayer playbackId={playbackId || ""} poster={thumbnailUrl || "/placeholder.svg"} playerInitTime={0} autoPlay={autoPlay} thumbnailTime={0} className="w-full h-full object-contain" accentColor="#FF0000" onPlay={onPlay}/>
 }
