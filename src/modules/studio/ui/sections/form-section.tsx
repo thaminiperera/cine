@@ -153,16 +153,6 @@ const FormSectionSuspense = ({ videoId }: FormSectionProps) => {
     },
   });
 
-  const generateThumbnail = trpc.videos.generateThumbnail.useMutation({
-    onSuccess: () => {
-      toast.success("Background job Started", {
-        description: "This may take some time",
-      });
-    },
-    onError: () => {
-      toast.error("Something went wrong");
-    },
-  });
 
   const restoreThumbnail = trpc.videos.restoreThumbnail.useMutation({
     onSuccess: () => {
@@ -302,12 +292,6 @@ const FormSectionSuspense = ({ videoId }: FormSectionProps) => {
                               Change
                             </DropdownMenuItem>
                             <DropdownMenuItem
-                              onClick={() => generateThumbnail.mutate()}
-                            >
-                              <SparklesIcon className="size-4 mr-1" />
-                              Generate using AI
-                            </DropdownMenuItem>
-                            <DropdownMenuItem
                               onClick={() =>
                                 restoreThumbnail.mutate({ id: videoId })
                               }
@@ -363,7 +347,7 @@ const FormSectionSuspense = ({ videoId }: FormSectionProps) => {
                   <div className="flex flex-col gap-y-1">
                     <p className="text-muted-foreground text-xs">Video Link</p>
                     <div className="flex items-center gap-x-2">
-                      <Link href={`videos/${video.id}`}>
+                      <Link href={`/videos/${video.id}`}>
                         <p className="line-clamp-1 text-sm text-blue-500">
                           {fullUrl}
                         </p>
