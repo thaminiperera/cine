@@ -51,6 +51,7 @@ import Image from "next/image";
 import { THUMBNAIL_FALLBACK } from "@/modules/videos/constants";
 import { ThumbnailUploadModal } from "../components/thumbnail-upload-modal";
 import { Skeleton } from "@/components/ui/skeleton";
+import { APP_URL } from "@/constants";
 
 interface FormSectionProps {
   videoId: string;
@@ -185,7 +186,7 @@ const FormSectionSuspense = ({ videoId }: FormSectionProps) => {
   };
 
   const fullUrl = `${
-    process.env.VERCEL_URL || "http://localhost:3000"
+    APP_URL || "http://localhost:3000"
   }/videos/${videoId}`;
   const onCopy = async () => {
     await navigator.clipboard.writeText(fullUrl);

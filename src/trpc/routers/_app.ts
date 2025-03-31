@@ -9,11 +9,13 @@ import { SubscriptionsRouter } from "@/modules/suscriptions/server/procedures";
 import { commentsRouter } from "@/modules/comments/server/procedures";
 import { commentReactionsRouter } from "@/modules/comment-reactions/server/procedures";
 import { suggestionsRouter } from "@/modules/suggestions/server/procedures";
+import { searchRouter } from "@/modules/search/server/procedures";
 
 export const appRouter = createTRPCRouter({
   categories: categoriesRouter,
   studio: studioRouter,
   videos: videosRouter,
+  search : searchRouter,
   comments: commentsRouter,
   videoViews: videoViewsRouter,
   videoReactions: videoReactionsRouter,
