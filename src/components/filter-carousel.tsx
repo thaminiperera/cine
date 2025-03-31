@@ -58,7 +58,7 @@ export const FilterCarousel = ({
         className="w-full px-12"
       >
         {/* w-[600px ] should be fixed*/}
-        <CarouselContent className="w-[600px] -ml-3"> 
+        <CarouselContent className=" w-[600px ] -ml-3"> 
 
           {!isLoading && (<CarouselItem onClick={() => onSelect(null)} className="pl-3 basis-auto">
             <Badge

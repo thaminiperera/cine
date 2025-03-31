@@ -2,6 +2,8 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { HomeNavbar } from "../components/home-navbar";
 import { HomeSidebar } from "../components/home-sidebar";
 
+export const dynamic = "force-dynamic"
+
 interface HomeLayoutProps {
   children: React.ReactNode;
 }
@@ -13,7 +15,7 @@ export const HomeLayout = ({ children }: HomeLayoutProps) => {
         <HomeNavbar />
         <div className="flex min-h-screen pt-[4rem]">
             <HomeSidebar/>
-          <main>{children}</main>
+          <main className="w-screen">{children}</main>
         </div>
       </div>
     </SidebarProvider>
