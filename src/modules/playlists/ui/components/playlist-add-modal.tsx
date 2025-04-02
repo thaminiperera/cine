@@ -40,6 +40,8 @@ export const PlaylistAddModal = ({
       toast.success("Added to playlist");
       utils.playlists.getMany.invalidate();
       utils.playlists.getManyForVideo.invalidate({ videoId });
+      utils.playlists.getOne.invalidate({id: data.playlistId})
+      utils.playlists.getVideos.invalidate({playlistId: data.playlistId})
     },
     onError: () => {
       toast.error("Something went wrong");
@@ -51,6 +53,8 @@ export const PlaylistAddModal = ({
       toast.success("Removed from playlist");
       utils.playlists.getMany.invalidate();
       utils.playlists.getManyForVideo.invalidate({ videoId });
+      utils.playlists.getOne.invalidate({id: data.playlistId})
+      utils.playlists.getVideos.invalidate({playlistId: data.playlistId})
     },
     onError: () => {
       toast.error("Something went wrong");
