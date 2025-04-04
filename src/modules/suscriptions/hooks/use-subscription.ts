@@ -19,9 +19,11 @@ export const useSubscription = ({
   const subscribe = trpc.subscriptions.create.useMutation({
     onSuccess: () => {
       toast.success("Subscribed");
-      utils.videos.getManySubscribed.invalidate()
+      utils.videos.getManySubscribed.invalidate();
+      utils.users.getOne.invalidate({ id: userId });
       if (fromVideoId) {
         utils.videos.getOne.invalidate({ id: fromVideoId });
+        
       }
     },
     onError: (error) => {
@@ -34,18 +36,19 @@ export const useSubscription = ({
 
   const unsubscribe = trpc.subscriptions.remove.useMutation({
     onSuccess: () => {
-        toast.success("Unsubscribed");
-        utils.videos.getManySubscribed.invalidate()
-        if (fromVideoId) {
-          utils.videos.getOne.invalidate({ id: fromVideoId });
-        }
-      },
-      onError: (error) => {
-        toast.error("Something went wrong");
-        if (error.data?.code === "UNAUTHORIZED") {
-          clerk.openSignIn();
-        }
-      },
+      toast.success("Unsubscribed");
+      utils.videos.getManySubscribed.invalidate();
+      utils.users.getOne.invalidate({ id: userId });
+      if (fromVideoId) {
+        utils.videos.getOne.invalidate({ id: fromVideoId });
+      }
+    },
+    onError: (error) => {
+      toast.error("Something went wrong");
+      if (error.data?.code === "UNAUTHORIZED") {
+        clerk.openSignIn();
+      }
+    },
   });
 
   const isPending = subscribe.isPending || unsubscribe.isPending;
