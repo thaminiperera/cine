@@ -11,7 +11,7 @@ export const StudioNavbar = () => {
         {/* Logo */}
         <div className="flex items-center flex-shrink-0">
           <SidebarTrigger />
-          <Link href="/studio">
+          <Link href="/studio" className="hidden md:block">
             <div className="flex items-center gap-0">
               <Image src="/logo.svg" height={32} width={32} alt="Logo" />
               <p className="font-xl tracking-tight font-black">Cine Studio</p>
