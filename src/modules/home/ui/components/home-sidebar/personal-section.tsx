@@ -18,7 +18,7 @@ const items = [
     title: "History",
     url: "/playlists/history",
     icon: HistoryIcon,
-    auth: true
+    auth: true,
   },
   {
     title: "Liked Cines",
@@ -35,12 +35,12 @@ const items = [
 ];
 
 export const PersonalSection = () => {
-  const {isSignedIn} = useAuth()
-  const clerk = useClerk()
-  const pathname = usePathname()
+  const { isSignedIn } = useAuth();
+  const clerk = useClerk();
+  const pathname = usePathname();
   return (
     <SidebarGroup>
-        <SidebarGroupLabel>You</SidebarGroupLabel>
+      <SidebarGroupLabel>You</SidebarGroupLabel>
       <SidebarGroupContent>
         <SidebarMenu>
           {items.map((item) => (
@@ -50,13 +50,17 @@ export const PersonalSection = () => {
                 asChild
                 isActive={pathname === item.url}
                 onClick={(e) => {
-                  if(!isSignedIn && item.auth) {
-                    e.preventDefault()
-                    return clerk.openSignIn()
+                  if (!isSignedIn && item.auth) {
+                    e.preventDefault();
+                    return clerk.openSignIn();
                   }
                 }}
               >
-                <Link href={item.url} className="flex items-center gap-4">
+                <Link
+                  prefetch
+                  href={item.url}
+                  className="flex items-center gap-4"
+                >
                   {" "}
                   <item.icon /> <span className="text-sm">{item.title}</span>
                 </Link>

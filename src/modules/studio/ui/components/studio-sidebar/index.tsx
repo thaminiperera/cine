@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Sidebar,
   SidebarContent,
@@ -14,26 +14,29 @@ import { Separator } from "@/components/ui/separator";
 import { StudioSidebarHeader } from "./studio-sidebar-header";
 
 export const StudioSidebar = () => {
-    const pathname = usePathname()
+  const pathname = usePathname();
   return (
     <Sidebar className="pt-16 z-40" collapsible="icon">
       <SidebarContent className="bg-background">
-       
         <SidebarGroup>
           <SidebarMenu>
-            <StudioSidebarHeader/>
+            <StudioSidebarHeader />
             <SidebarMenuItem>
-              <SidebarMenuButton isActive={pathname === "/studio"} tooltip="Content" asChild>
-                <Link href="/studio">
+              <SidebarMenuButton
+                isActive={pathname === "/studio"}
+                tooltip="Content"
+                asChild
+              >
+                <Link prefetch href="/studio">
                   <VideoIcon className="size-5" />
                   <span className="text-sm">Content</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
-            <Separator/>
+            <Separator />
             <SidebarMenuItem>
               <SidebarMenuButton tooltip="Exit Studio" asChild>
-                <Link href="/">
+                <Link prefetch href="/">
                   <LogOutIcon className="size-5" />
                   <span className="text-sm">Exit Studio</span>
                 </Link>
