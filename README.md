@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Real-Time Document Editing & Collaboration Platform
 
-## Getting Started
+A modern, video platform built for creators and viewers alike. Designed with performance, scalability, and user experience at its core. Built with the latest web technologies like Next.js 15, React 19, tRPC, and styled with TailwindCSS and ShadcnUI.
 
-First, run the development server:
+Application Demo :  https://docs-five-orpin.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Advanced Video Player** — Enjoy high-quality streaming with dynamic resolution switching.
+- **Real-Time Video Processing** — Powered by Mux for fast, reliable video encoding and delivery.
+- **Smart Thumbnails** — Automatically generated thumbnails that highlight the best video moments.
+- **Creator Studio** — Track views, engagement, and other key metrics.
+- **Custom Playlists** — Organize videos into custom playlists for better content discovery.
+- **Fully Responsive** — Seamlessly adapts to mobile, tablet, and desktop screens.
+- **Multiple Feeds** — Home, trending, subscriptions, and more.
+- **Interactive Comments** — Rich comment system with replies and likes.
+- **Like & Subscribe System** — Built-in social engagement tools.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend:**  
+  - **Next.js**: For server-side rendering and fast load times.  
+  - **Tailwind CSS & Shadcn**: For responsive and stylish UI.  
+  - **Lucide-react & React-Icons**: For intuitive and clear iconography.  
+  - **Toast**: For user notifications.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Backend:**  
+  - **tRPC**: End-to-end type-safe API communication.
+  - **PostgreSQL**:  Relational database for structured data.
+  - **DrizzleORM**: Type-safe, developer-friendly ORM for database management.
+  - **Mux**: Real-time video processing and streaming.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Authentication:**  
+  - **Clerk**: For secure user authentication and access management.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Credits
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Video processing powered by Mux
+- UI components via Shadcn UI
+- Type-safe APIs using tRPC
+
+---
+
+## Deployment
+
+The entire platform is deployed on **Vercel** at  https://docs-five-orpin.vercel.app
+
