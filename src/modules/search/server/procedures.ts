@@ -4,7 +4,6 @@ import { users, videoReactions, videos, videoViews } from "@/db/schema";
 import {
   baseProcedure,
   createTRPCRouter,
-  protectedProcedure,
 } from "@/trpc/init";
 import { eq, and, or, lt, desc, ilike, getTableColumns } from "drizzle-orm";
 

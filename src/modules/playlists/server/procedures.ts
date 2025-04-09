@@ -9,7 +9,6 @@ import {
   videoViews,
 } from "@/db/schema";
 import {
-  baseProcedure,
   createTRPCRouter,
   protectedProcedure,
 } from "@/trpc/init";

@@ -19,7 +19,6 @@ import {
   LockIcon,
   MoreVerticalIcon,
   RotateCcwIcon,
-  SparklesIcon,
   TrashIcon,
 } from "lucide-react";
 import { Suspense, useState } from "react";
@@ -31,7 +30,6 @@ import {
   FormControl,
   FormField,
   FormLabel,
-  FormMessage,
   FormItem,
 } from "@/components/ui/form";
 import {
