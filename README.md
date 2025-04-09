@@ -2,7 +2,7 @@
 
 A modern, video platform built for creators and viewers alike. Designed with performance, scalability, and user experience at its core. Built with the latest web technologies like Next.js 15, React 19, tRPC, and styled with TailwindCSS and ShadcnUI.
 
-Application Demo :  https://docs-five-orpin.vercel.app
+Application Demo :  https://cine-blue.vercel.app/
 
 ---
 
@@ -49,5 +49,5 @@ Application Demo :  https://docs-five-orpin.vercel.app
 
 ## Deployment
 
-The entire platform is deployed on **Vercel** at  https://docs-five-orpin.vercel.app
+The entire platform is deployed on **Vercel** at https://cine-blue.vercel.app
 
