@@ -1,4 +1,4 @@
-# Real-Time Document Editing & Collaboration Platform
+# Real-Time Video Platform
 
 A modern, video platform built for creators and viewers alike. Designed with performance, scalability, and user experience at its core. Built with the latest web technologies like Next.js 15, React 19, tRPC, and styled with TailwindCSS and ShadcnUI.
 
